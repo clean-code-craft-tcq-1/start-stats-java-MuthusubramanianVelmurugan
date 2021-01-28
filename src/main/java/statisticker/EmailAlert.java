@@ -11,5 +11,4 @@ public class EmailAlert extends IAlerter {
     public void setEmailSent(boolean emailSent) {
         this.emailSent = emailSent;
     }
-
 }
