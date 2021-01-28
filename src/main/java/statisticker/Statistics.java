@@ -1,6 +1,6 @@
 package statisticker;
 
-import java.util.DoubleSummaryStatistics;
+import java.util.Collections;
 import java.util.List;
 
 public class Statistics {
@@ -47,11 +47,23 @@ public class Statistics {
     }
 
     public static Stats getStatistics(List<Float> numbers) {
-        if (numbers != null && !numbers.isEmpty()) {
+        if (numbers == null || numbers.isEmpty()) {
             return new Stats();
+        } else {
+            float averageofNumbers = getAverageofNumbers(numbers);
+            float max = Collections.max(numbers);
+            float min = Collections.min(numbers);
+            Stats stats = new Stats(averageofNumbers, max, min);
+            return stats;
         }
-        DoubleSummaryStatistics summaryStats = numbers.stream().mapToDouble((a) -> a).summaryStatistics();
-        Stats stats = new Stats((float) summaryStats.getAverage(), (float) summaryStats.getMin(), (float) summaryStats.getMax());
-        return stats;
+    }
+
+    private static float getAverageofNumbers(List<Float> numbers) {
+        float sumOfNumbers = 0;
+        for (float number : numbers) {
+            sumOfNumbers += number;
+        }
+        return sumOfNumbers / numbers.size();
     }
 }
+
