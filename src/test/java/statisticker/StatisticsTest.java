@@ -9,12 +9,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import statisticker.StatsChecker;
-import statisticker.EmailAlert;
-import statisticker.IAlerter;
-import statisticker.LEDAlert;
-import statisticker.Statistics;
-
 public class StatisticsTest {
     @Test
     public void reportsAverageMinMaxx() {
