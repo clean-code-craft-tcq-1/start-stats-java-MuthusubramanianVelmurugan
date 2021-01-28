@@ -10,10 +10,10 @@ import java.util.List;
 import org.junit.Test;
 
 import statisticker.StatsChecker;
-import statisticker.alerter.EmailAlert;
-import statisticker.alerter.IAlerter;
-import statisticker.alerter.LEDAlert;
-import statisticker1.Statistics;
+import statisticker.EmailAlert;
+import statisticker.IAlerter;
+import statisticker.LEDAlert;
+import statisticker.Statistics;
 
 public class StatisticsTest {
     @Test
