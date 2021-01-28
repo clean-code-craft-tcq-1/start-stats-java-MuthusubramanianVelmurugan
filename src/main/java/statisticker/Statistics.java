@@ -53,7 +53,7 @@ public class Statistics {
             float averageofNumbers = getAverageofNumbers(numbers);
             float max = Collections.max(numbers);
             float min = Collections.min(numbers);
-            Stats stats = new Stats(averageofNumbers, max, min);
+            Stats stats = new Stats(averageofNumbers, min, max);
             return stats;
         }
     }
@@ -66,4 +66,3 @@ public class Statistics {
         return sumOfNumbers / numbers.size();
     }
 }
-
